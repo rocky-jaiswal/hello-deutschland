@@ -11,8 +11,12 @@ class DeutschApp.View.Home extends Backbone.View
   initialize: ->
     console.log "init home..."
     @suggestionsView = new DeutschApp.View.Suggestions()
-    $("#main-content").html("")
+    @clearContent()
     @render()
+
+  clearContent: ->
+    $("#card-content").html("")
+    $("#main-content").html("")
 
   render: =>
     @$el.html(@template)
@@ -23,7 +27,8 @@ class DeutschApp.View.Home extends Backbone.View
     @getSuggestions(phrase)
   
   getSuggestions: (phrase) ->
-    @showSuggestions ["gut", "gut nacht", "guten morgen", "guten abend", "guten tag"]
+    engine = new DeutschApp.Service.Engine()
+    @showSuggestions engine.search(phrase)
 
   showSuggestions: (suggestions) ->
     # @undelegateEvents()

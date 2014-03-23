@@ -4,7 +4,6 @@ class DeutschApp.View.Suggestions extends Backbone.View
 
   initialize: ->
     console.log "init suggestions..."
-    @$el.html("")
 
   render: (items) ->
     @$el.html(@template({items: items}))

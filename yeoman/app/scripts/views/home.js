@@ -22,8 +22,13 @@
     Home.prototype.initialize = function() {
       console.log("init home...");
       this.suggestionsView = new DeutschApp.View.Suggestions();
-      $("#main-content").html("");
+      this.clearContent();
       return this.render();
+    };
+
+    Home.prototype.clearContent = function() {
+      $("#card-content").html("");
+      return $("#main-content").html("");
     };
 
     Home.prototype.render = function() {
@@ -38,7 +43,9 @@
     };
 
     Home.prototype.getSuggestions = function(phrase) {
-      return this.showSuggestions(["gut", "gut nacht", "guten morgen", "guten abend", "guten tag"]);
+      var engine;
+      engine = new DeutschApp.Service.Engine();
+      return this.showSuggestions(engine.search(phrase));
     };
 
     Home.prototype.showSuggestions = function(suggestions) {

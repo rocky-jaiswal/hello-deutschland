@@ -4,6 +4,7 @@ window.DeutschApp =
   Collection: {}
   View: {}
   Router: {}
+  Service: {}
   JST: {}
   
   init: ->

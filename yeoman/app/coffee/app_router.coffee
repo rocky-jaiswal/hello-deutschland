@@ -10,4 +10,4 @@ class DeutschApp.Router.AppRouter extends Backbone.Router
   showPhrase: (phrase) ->
     console.log "show route triggered"
     @phraseView ||= new DeutschApp.View.ShowPhrase()
-    @phraseView.render({phrase: phrase})
+    @phraseView.render(phrase)

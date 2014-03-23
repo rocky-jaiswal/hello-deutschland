@@ -21,9 +21,7 @@
     AppRouter.prototype.showPhrase = function(phrase) {
       console.log("show route triggered");
       this.phraseView || (this.phraseView = new DeutschApp.View.ShowPhrase());
-      return this.phraseView.render({
-        phrase: phrase
-      });
+      return this.phraseView.render(phrase);
     };
 
     return AppRouter;

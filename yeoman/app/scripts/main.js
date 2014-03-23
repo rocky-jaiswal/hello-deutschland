@@ -4,6 +4,7 @@
     Collection: {},
     View: {},
     Router: {},
+    Service: {},
     JST: {},
     init: function() {
       new DeutschApp.Router.AppRouter();

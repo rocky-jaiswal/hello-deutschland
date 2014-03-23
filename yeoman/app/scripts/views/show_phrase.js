@@ -20,7 +20,14 @@
     };
 
     ShowPhrase.prototype.template = function(phrase) {
-      return Handlebars.compile(JST["app/coffee/templates/phrase.hbs"](phrase));
+      var engine, obj, translation;
+      engine = new DeutschApp.Service.Engine();
+      translation = engine.translate(phrase);
+      obj = {
+        phrase: phrase,
+        translation: translation
+      };
+      return Handlebars.compile(JST["app/coffee/templates/phrase.hbs"](obj));
     };
 
     return ShowPhrase;
