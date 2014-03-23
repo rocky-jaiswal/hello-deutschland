@@ -11,9 +11,7 @@
 
     Suggestions.prototype.el = "#card-content";
 
-    Suggestions.prototype.initialize = function() {
-      return console.log("init suggestions...");
-    };
+    Suggestions.prototype.initialize = function() {};
 
     Suggestions.prototype.render = function(items) {
       return this.$el.html(this.template({

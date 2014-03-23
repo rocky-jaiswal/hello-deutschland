@@ -11,9 +11,7 @@
 
     ShowPhrase.prototype.el = "#main-content";
 
-    ShowPhrase.prototype.initialize = function() {
-      return console.log("init phrase...");
-    };
+    ShowPhrase.prototype.initialize = function() {};
 
     ShowPhrase.prototype.render = function(phrase) {
       return this.$el.html(this.template(phrase));

@@ -9,7 +9,6 @@ class DeutschApp.View.Home extends Backbone.View
     Handlebars.compile(JST["app/coffee/templates/main.hbs"]())
 
   initialize: ->
-    console.log "init home..."
     @suggestionsView = new DeutschApp.View.Suggestions()
     @clearContent()
     @render()
@@ -23,8 +22,8 @@ class DeutschApp.View.Home extends Backbone.View
 
   handleSubmit: (e) ->
     e.preventDefault()
-    phrase = $("#main-form > #phrase").val()
-    @getSuggestions(phrase)
+    @clearContent()
+    @getSuggestions($("#main-form > #phrase").val())
   
   getSuggestions: (phrase) ->
     engine = new DeutschApp.Service.Engine()

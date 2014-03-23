@@ -20,7 +20,6 @@
     Home.prototype.template = Handlebars.compile(JST["app/coffee/templates/main.hbs"]());
 
     Home.prototype.initialize = function() {
-      console.log("init home...");
       this.suggestionsView = new DeutschApp.View.Suggestions();
       this.clearContent();
       return this.render();
@@ -36,10 +35,9 @@
     };
 
     Home.prototype.handleSubmit = function(e) {
-      var phrase;
       e.preventDefault();
-      phrase = $("#main-form > #phrase").val();
-      return this.getSuggestions(phrase);
+      this.clearContent();
+      return this.getSuggestions($("#main-form > #phrase").val());
     };
 
     Home.prototype.getSuggestions = function(phrase) {

@@ -3,8 +3,8 @@ class DeutschApp.View.ShowPhrase extends Backbone.View
   el: "#main-content"
 
   initialize: ->
-    console.log "init phrase..."
-
+    
+  
   render: (phrase) ->
     @$el.html(@template(phrase))
   
