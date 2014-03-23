@@ -11,17 +11,16 @@
 
     ShowPhrase.prototype.el = "#main-content";
 
-    ShowPhrase.prototype.initialize = function(options) {
-      this.options = options;
-      return this.render();
+    ShowPhrase.prototype.initialize = function() {
+      return console.log("init phrase...");
     };
 
-    ShowPhrase.prototype.render = function() {
-      return this.$el.html(this.template());
+    ShowPhrase.prototype.render = function(phrase) {
+      return this.$el.html(this.template(phrase));
     };
 
-    ShowPhrase.prototype.template = function() {
-      return Handlebars.compile(JST["app/coffee/templates/phrase.hbs"](_.pick(this.options, 'phrase')));
+    ShowPhrase.prototype.template = function(phrase) {
+      return Handlebars.compile(JST["app/coffee/templates/phrase.hbs"](phrase));
     };
 
     return ShowPhrase;

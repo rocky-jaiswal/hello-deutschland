@@ -21,6 +21,8 @@
 
     Home.prototype.initialize = function() {
       console.log("init home...");
+      this.suggestionsView = new DeutschApp.View.Suggestions();
+      $("#main-content").html("");
       return this.render();
     };
 
@@ -40,9 +42,7 @@
     };
 
     Home.prototype.showSuggestions = function(suggestions) {
-      var suggestionsView;
-      suggestionsView = new DeutschApp.View.Suggestions();
-      return suggestionsView.render(suggestions);
+      return this.suggestionsView.render(suggestions);
     };
 
     return Home;

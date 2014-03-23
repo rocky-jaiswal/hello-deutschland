@@ -19,9 +19,10 @@
     };
 
     AppRouter.prototype.showPhrase = function(phrase) {
-      return new DeutschApp.View.ShowPhrase({
-        phrase: phrase,
-        app: this
+      console.log("show route triggered");
+      this.phraseView || (this.phraseView = new DeutschApp.View.ShowPhrase());
+      return this.phraseView.render({
+        phrase: phrase
       });
     };
 

@@ -10,6 +10,8 @@ class DeutschApp.View.Home extends Backbone.View
 
   initialize: ->
     console.log "init home..."
+    @suggestionsView = new DeutschApp.View.Suggestions()
+    $("#main-content").html("")
     @render()
 
   render: =>
@@ -25,5 +27,4 @@ class DeutschApp.View.Home extends Backbone.View
 
   showSuggestions: (suggestions) ->
     # @undelegateEvents()
-    suggestionsView = new DeutschApp.View.Suggestions()
-    suggestionsView.render(suggestions)
+    @suggestionsView.render(suggestions)

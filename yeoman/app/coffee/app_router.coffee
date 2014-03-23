@@ -8,4 +8,6 @@ class DeutschApp.Router.AppRouter extends Backbone.Router
     new DeutschApp.View.Home()
 
   showPhrase: (phrase) ->
-    new DeutschApp.View.ShowPhrase({phrase: phrase, app: @})
+    console.log "show route triggered"
+    @phraseView ||= new DeutschApp.View.ShowPhrase()
+    @phraseView.render({phrase: phrase})
