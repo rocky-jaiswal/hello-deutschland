@@ -11,16 +11,38 @@
       return Home.__super__.constructor.apply(this, arguments);
     }
 
-    Home.prototype.el = "#main-content";
+    Home.prototype.el = "#form-content";
+
+    Home.prototype.events = {
+      "submit #main-form": "handleSubmit"
+    };
 
     Home.prototype.template = Handlebars.compile(JST["app/coffee/templates/main.hbs"]());
 
     Home.prototype.initialize = function() {
+      console.log("init home...");
       return this.render();
     };
 
     Home.prototype.render = function() {
       return this.$el.html(this.template);
+    };
+
+    Home.prototype.handleSubmit = function(e) {
+      var phrase;
+      e.preventDefault();
+      phrase = $("#main-form > #phrase").val();
+      return this.getSuggestions(phrase);
+    };
+
+    Home.prototype.getSuggestions = function(phrase) {
+      return this.showSuggestions(["gut", "gut nacht", "guten morgen", "guten abend", "guten tag"]);
+    };
+
+    Home.prototype.showSuggestions = function(suggestions) {
+      var suggestionsView;
+      suggestionsView = new DeutschApp.View.Suggestions();
+      return suggestionsView.render(suggestions);
     };
 
     return Home;
