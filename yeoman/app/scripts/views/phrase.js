@@ -12,7 +12,7 @@
     Phrase.prototype.el = "#main-content";
 
     Phrase.prototype.events = {
-      "close #main-form": "handleSubmit"
+      "click .close": "hidePopup"
     };
 
     Phrase.prototype.initialize = function() {
@@ -33,6 +33,11 @@
         translation: translation
       };
       return Handlebars.compile(JST["app/coffee/templates/phrase.hbs"](obj));
+    };
+
+    Phrase.prototype.hidePopup = function(e) {
+      e.preventDefault();
+      return this.$el.hide();
     };
 
     return Phrase;

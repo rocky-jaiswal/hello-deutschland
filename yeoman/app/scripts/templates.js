@@ -15,7 +15,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression;
 
 
-  buffer += "<div>\n  <span class=\"icon icon-close pull-right\"></span>\n  <h2>";
+  buffer += "<div>\n  <a class=\"close\" href=\"#close\"><span class=\"icon icon-close pull-right\"></span></a>\n  <h2>";
   if (helper = helpers.phrase) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.phrase); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)

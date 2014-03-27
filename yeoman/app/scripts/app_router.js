@@ -10,16 +10,16 @@
     }
 
     AppRouter.prototype.routes = {
-      "": "home",
+      "": "main",
       "show/:phrase": "showPhrase"
     };
 
-    AppRouter.prototype.home = function() {
-      return new DeutschApp.View.Home();
+    AppRouter.prototype.main = function() {
+      return new DeutschApp.View.Main();
     };
 
     AppRouter.prototype.showPhrase = function(phrase) {
-      this.phraseView || (this.phraseView = new DeutschApp.View.ShowPhrase());
+      this.phraseView || (this.phraseView = new DeutschApp.View.Phrase());
       return this.phraseView.render(phrase);
     };
 

@@ -1,4 +1,4 @@
-class DeutschApp.View.Home extends Backbone.View
+class DeutschApp.View.Main extends Backbone.View
 
   el: "#form-content"
 

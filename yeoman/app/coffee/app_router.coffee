@@ -1,12 +1,12 @@
 class DeutschApp.Router.AppRouter extends Backbone.Router
 
   routes:
-    "" : "home"
+    "" : "main"
     "show/:phrase" : "showPhrase"
 
-  home: ->
-    new DeutschApp.View.Home()
+  main: ->
+    new DeutschApp.View.Main()
 
   showPhrase: (phrase) ->
-    @phraseView ||= new DeutschApp.View.ShowPhrase()
+    @phraseView ||= new DeutschApp.View.Phrase()
     @phraseView.render(phrase)
