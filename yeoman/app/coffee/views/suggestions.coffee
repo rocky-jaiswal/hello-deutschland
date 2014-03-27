@@ -7,6 +7,6 @@ class DeutschApp.View.Suggestions extends Backbone.View
 
   render: (items) ->
     @$el.html(@template({items: items}))
-  
+
   template: (items) ->
     Handlebars.compile(JST["app/coffee/templates/suggestions.hbs"](items))

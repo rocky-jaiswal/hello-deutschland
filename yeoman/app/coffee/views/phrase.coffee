@@ -10,7 +10,6 @@ class DeutschApp.View.Phrase extends Backbone.View
 
   render: (phrase) ->
     @$el.html(@template(phrase))
-    @$el.addClass('animated slideInDown')
     @$el.show()
 
   template: (phrase) ->

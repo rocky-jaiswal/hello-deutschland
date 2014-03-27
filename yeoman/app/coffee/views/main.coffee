@@ -15,7 +15,6 @@ class DeutschApp.View.Main extends Backbone.View
 
   clearContent: ->
     $("#card-content").html("")
-    $("#main-content").html("")
 
   render: =>
     @$el.html(@template)
@@ -24,11 +23,13 @@ class DeutschApp.View.Main extends Backbone.View
     e.preventDefault()
     @clearContent()
     @getSuggestions($("#main-form > #phrase").val())
-  
+
   getSuggestions: (phrase) ->
     if phrase && phrase.length > 0
       engine = new DeutschApp.Service.Engine()
-      @showSuggestions engine.search(phrase)
+      suggestions = engine.search(phrase)
+      suggestions = ["not found"] if _.isEmpty suggestions
+      @showSuggestions suggestions
 
   showSuggestions: (suggestions) ->
     # @undelegateEvents()

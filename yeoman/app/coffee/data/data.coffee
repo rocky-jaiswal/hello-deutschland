@@ -1,5 +1,5 @@
 window.translation_data =
-  "Guten Morning": "Good Morning"
+  "Guten Morning": "Good Morgen"
   "Guten Tag": "Good Day"
   "Guten Abend": "Good Evening"
   "Gute Nacht": "Good Night"
@@ -9,3 +9,4 @@ window.translation_data =
   "Tschüs": "Bye!"
   "Tut mir lied": "Sorry"
   "Entschuldigung": "Excuse Me"
+  "not found": "nicht gefunden"

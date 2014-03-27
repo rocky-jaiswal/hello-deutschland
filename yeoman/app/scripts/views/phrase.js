@@ -21,7 +21,6 @@
 
     Phrase.prototype.render = function(phrase) {
       this.$el.html(this.template(phrase));
-      this.$el.addClass('animated slideInDown');
       return this.$el.show();
     };
 

@@ -26,8 +26,7 @@
     };
 
     Main.prototype.clearContent = function() {
-      $("#card-content").html("");
-      return $("#main-content").html("");
+      return $("#card-content").html("");
     };
 
     Main.prototype.render = function() {
@@ -41,10 +40,14 @@
     };
 
     Main.prototype.getSuggestions = function(phrase) {
-      var engine;
+      var engine, suggestions;
       if (phrase && phrase.length > 0) {
         engine = new DeutschApp.Service.Engine();
-        return this.showSuggestions(engine.search(phrase));
+        suggestions = engine.search(phrase);
+        if (_.isEmpty(suggestions)) {
+          suggestions = ["not found"];
+        }
+        return this.showSuggestions(suggestions);
       }
     };
 
