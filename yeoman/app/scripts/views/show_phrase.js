@@ -11,16 +11,18 @@
 
     ShowPhrase.prototype.el = "#main-content";
 
-    ShowPhrase.prototype.initialize = function() {};
+    ShowPhrase.prototype.initialize = function() {
+      return this.engine = new DeutschApp.Service.Engine();
+    };
 
     ShowPhrase.prototype.render = function(phrase) {
-      return this.$el.html(this.template(phrase));
+      this.$el.html(this.template(phrase));
+      return this.$el.show();
     };
 
     ShowPhrase.prototype.template = function(phrase) {
-      var engine, obj, translation;
-      engine = new DeutschApp.Service.Engine();
-      translation = engine.translate(phrase);
+      var obj, translation;
+      translation = this.engine.translate(phrase);
       obj = {
         phrase: phrase,
         translation: translation

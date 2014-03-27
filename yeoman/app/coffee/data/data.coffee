@@ -4,7 +4,7 @@ window.translation_data =
   "Guten Abend": "Good Evening"
   "Gute Nacht": "Good Night"
   "Danke": "Thank You"
-  "Danke Schön": "Thank You"
+  "Danke Schön": "Thank you very much"
   "Bitte": "Please"
   "Tschüs": "Bye!"
   "Tut mir lied": "Sorry"

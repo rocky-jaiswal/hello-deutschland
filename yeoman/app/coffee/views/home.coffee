@@ -26,8 +26,9 @@ class DeutschApp.View.Home extends Backbone.View
     @getSuggestions($("#main-form > #phrase").val())
   
   getSuggestions: (phrase) ->
-    engine = new DeutschApp.Service.Engine()
-    @showSuggestions engine.search(phrase)
+    if phrase && phrase.length > 0
+      engine = new DeutschApp.Service.Engine()
+      @showSuggestions engine.search(phrase)
 
   showSuggestions: (suggestions) ->
     # @undelegateEvents()

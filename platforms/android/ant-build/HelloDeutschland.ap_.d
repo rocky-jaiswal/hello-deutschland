@@ -22,7 +22,7 @@
 /home/rockyj/Workspace/2-Projects/4-Mobile/hello-deutschland/platforms/android/assets/www/6df2b309.favicon.ico \
 /home/rockyj/Workspace/2-Projects/4-Mobile/hello-deutschland/platforms/android/assets/www/cordova.js \
 /home/rockyj/Workspace/2-Projects/4-Mobile/hello-deutschland/platforms/android/assets/www/config.xml \
-/home/rockyj/Workspace/2-Projects/4-Mobile/hello-deutschland/platforms/android/assets/www/scripts/2045751c.main.js \
+/home/rockyj/Workspace/2-Projects/4-Mobile/hello-deutschland/platforms/android/assets/www/scripts/170b0056.main.js \
 /home/rockyj/Workspace/2-Projects/4-Mobile/hello-deutschland/platforms/android/assets/www/styles/fonts \
 /home/rockyj/Workspace/2-Projects/4-Mobile/hello-deutschland/platforms/android/assets/www/styles/cee7b8e5.main.css \
 /home/rockyj/Workspace/2-Projects/4-Mobile/hello-deutschland/platforms/android/assets/www/styles/fonts/ratchicons.ttf \

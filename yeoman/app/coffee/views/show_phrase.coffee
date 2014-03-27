@@ -3,13 +3,13 @@ class DeutschApp.View.ShowPhrase extends Backbone.View
   el: "#main-content"
 
   initialize: ->
-    
-  
+    @engine = new DeutschApp.Service.Engine()
+
   render: (phrase) ->
     @$el.html(@template(phrase))
-  
+    @$el.show()
+
   template: (phrase) ->
-    engine = new DeutschApp.Service.Engine()
-    translation = engine.translate(phrase)
+    translation = @engine.translate(phrase)
     obj = {phrase: phrase, translation: translation}
     Handlebars.compile(JST["app/coffee/templates/phrase.hbs"](obj))

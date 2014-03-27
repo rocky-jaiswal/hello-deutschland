@@ -42,8 +42,10 @@
 
     Home.prototype.getSuggestions = function(phrase) {
       var engine;
-      engine = new DeutschApp.Service.Engine();
-      return this.showSuggestions(engine.search(phrase));
+      if (phrase && phrase.length > 0) {
+        engine = new DeutschApp.Service.Engine();
+        return this.showSuggestions(engine.search(phrase));
+      }
     };
 
     Home.prototype.showSuggestions = function(suggestions) {
