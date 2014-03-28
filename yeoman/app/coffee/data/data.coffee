@@ -9,4 +9,5 @@ window.translation_data =
   "Tschüs": "Bye!"
   "Tut mir lied": "Sorry"
   "Entschuldigung": "Excuse Me"
-  "not found": "nicht gefunden"
+  "Not Found": "Nicht Gefunden"
+  "wo": "where"
