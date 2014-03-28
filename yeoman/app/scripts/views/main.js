@@ -45,7 +45,7 @@
         engine = new DeutschApp.Service.Engine();
         suggestions = engine.search(phrase);
         if (_.isEmpty(suggestions)) {
-          suggestions = ["not found"];
+          suggestions = ["Not Found"];
         }
         return this.showSuggestions(suggestions);
       }

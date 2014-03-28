@@ -28,7 +28,7 @@ class DeutschApp.View.Main extends Backbone.View
     if phrase && phrase.length > 0
       engine = new DeutschApp.Service.Engine()
       suggestions = engine.search(phrase)
-      suggestions = ["not found"] if _.isEmpty suggestions
+      suggestions = ["Not Found"] if _.isEmpty suggestions
       @showSuggestions suggestions
 
   showSuggestions: (suggestions) ->

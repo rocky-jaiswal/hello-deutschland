@@ -18,5 +18,5 @@ class DeutschApp.View.Phrase extends Backbone.View
     Handlebars.compile(JST["app/coffee/templates/phrase.hbs"](obj))
 
   hidePopup: (e)->
-    e.preventDefault()
+    # e.preventDefault()
     @$el.hide()

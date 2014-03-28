@@ -35,7 +35,6 @@
     };
 
     Phrase.prototype.hidePopup = function(e) {
-      e.preventDefault();
       return this.$el.hide();
     };
 
